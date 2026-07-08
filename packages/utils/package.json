@@ -8,6 +8,7 @@
     "dev": "tsup --watch"
   },
   "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
@@ -16,9 +17,9 @@
       "default": "./dist/index.js"
     }
   },
-  "license": "ISC",
   "devDependencies": {
-    "tsup": "^8.5.1",
+    "tsup": "catalog:",
     "typescript": "catalog:"
-  }
+  },
+  "license": "ISC"
 }

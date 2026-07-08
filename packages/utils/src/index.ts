@@ -1,1 +1,3 @@
-export * from "@filmato/utils/toTitleCase";
+export * from "@filmato/utils/format-duration";
+export * from "@filmato/utils/to-titlecase";
+
