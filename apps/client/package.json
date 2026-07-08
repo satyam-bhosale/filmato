@@ -9,11 +9,24 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@filmato/auth-client": "workspace:*",
+    "@filmato/components": "workspace:*",
+    "@filmato/constants": "workspace:*",
+    "@filmato/contracts": "workspace:*",
+    "@filmato/hooks": "workspace:*",
     "@filmato/utils": "workspace:*",
+    "@hookform/resolvers": "catalog:",
     "@shadcn/ui": "workspace:*",
+    "input-otp": "catalog:",
+    "lucide-react": "catalog:",
+    "motion": "catalog:",
     "next": "16.2.4",
+    "next-themes": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "react-hook-form": "catalog:",
+    "sonner": "catalog:",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -22,6 +35,7 @@
     "@types/react-dom": "catalog:",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "shadcn": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
   }

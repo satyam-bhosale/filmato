@@ -19,6 +19,7 @@
     ],
     "paths": {
       "@filmato/client/*": ["./*"],
+      "@filmato/features/*": ["../../features/*"],
       "@shadcn/ui/*": ["../../packages/ui/src/*"]
     }
   },
