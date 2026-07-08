@@ -2,16 +2,27 @@
     "$schema": "https://turborepo.dev/schema.json",
     "ui": "tui",
     "tasks": {
-        "build":{
+        "build": {
             "dependsOn": ["^build"],
-            "cache": true
+            "cache": true,
+            "outputs": ["dist/**", ".next/**"]
         },
-        "dev":{
+        "dev": {
             "dependsOn": ["^build"],
             "persistent": true,
             "cache": false
         },
-        "start":{
+        "start": {
+            "dependsOn": ["^build"],
+            "persistent": true,
+            "cache": false
+        },
+        "android": {
+            "dependsOn": ["^build"],
+            "persistent": true,
+            "cache": false
+        },
+        "ios": {
             "dependsOn": ["^build"],
             "persistent": true,
             "cache": false

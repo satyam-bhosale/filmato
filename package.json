@@ -1,23 +1,31 @@
 {
   "name": "filmato",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "dev": "turbo run dev",
     "dev:backend": "turbo run dev --filter=@filmato/backend",
     "dev:admin": "turbo run dev --filter=@filmato/admin",
-    "dev:mobile": "turbo run start --filter=@filmato/mobile",
     "dev:client": "turbo run dev --filter=@filmato/client",
+    "dev:mobile": "turbo run start --filter=@filmato/mobile",
+    "dev:android": "turbo run android --filter=@filmato/mobile",
+    "dev:ios": "turbo run ios --filter=@filmato/mobile",
 
+    "build": "turbo run build",
     "build:backend": "turbo run build --filter=@filmato/backend",
     "build:admin": "turbo run build --filter=@filmato/admin",
     "build:mobile": "turbo run build --filter=@filmato/mobile",
     "build:client": "turbo run build --filter=@filmato/client",
-    "build:utils": "turbo run build --filter=@filmato/utils"
+    "build:utils": "turbo run build --filter=@filmato/utils",
+    "build:contracts": "turbo run build --filter=@filmato/contracts",
+    "build:constants": "turbo run build --filter=@filmato/constants",
+    
+    "devtools": "turbo devtools --port=3003"
+  },
+  "devDependencies": {
+    "turbo": "2.9.9",
+    "typescript": "catalog:"
   },
   "license": "ISC",
-  "packageManager": "pnpm@10.18.3",
-  "devDependencies": {
-    "turbo": "^2.9.6"
-  }
+  "packageManager": "pnpm@10.18.3"
 }

@@ -79,3 +79,6 @@ build/
 # env
 .env*
 !.env.example
+
+# misc
+*.mermaid
