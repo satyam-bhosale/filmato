@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "es2023",
@@ -7,14 +8,14 @@
       "DOM"
     ],
     "module": "esnext",
-    "types": ["vite/client"],
-    
+    "types": [
+      "vite/client"
+    ],
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
     /* Linting */
     "erasableSyntaxOnly": true,
     "paths": {
