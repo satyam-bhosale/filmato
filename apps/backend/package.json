@@ -5,20 +5,48 @@
   "type": "module",
   "main": "dist/src/server.js",
   "scripts": {
-    "dev": "tsx watch --watch src/server.ts",
+    "dev": "cross-env NODE_ENV=development tsx watch src/server.ts",
     "build": "tsc && tsc-alias",
-    "start": "node dist/src/server.js"
+    "start": "node dist/src/server.js",
+    "email": "email dev --dir src/emails --port=3002",
+    "db:auth:generate": "pnpm build && pnpm dlx auth@latest generate --config ./dist/src/lib/auth.js --output ./src/db/schemas/auth.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate --config=drizzle.config.ts",
+    "db:studio": "drizzle-kit studio --verbose --port 3002 --config=drizzle.config.ts"
   },
-  "license": "ISC",
   "dependencies": {
+    "@better-auth/expo": "catalog:",
+    "@filmato/constants": "workspace:*",
     "@filmato/utils": "workspace:*",
-    "express": "^5.2.1"
+    "@logtape/express": "^2.0.5",
+    "@logtape/logtape": "^2.0.5",
+    "@logtape/pretty": "^2.0.5",
+    "@neondatabase/serverless": "^1.1.0",
+    "@upstash/redis": "^1.37.0",
+    "argon2": "^0.44.0",
+    "better-auth": "catalog:",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "express": "^5.2.1",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-email": "6.0.0",
+    "resend": "^6.12.2",
+    "zod": "catalog:"
   },
   "devDependencies": {
+    "@react-email/ui": "6.0.0",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "cross-env": "^10.1.0",
+    "drizzle-kit": "^0.31.10",
     "tsc-alias": "^1.8.16",
     "tsx": "^4.21.0",
     "typescript": "catalog:"
-  }
+  },
+  "license": "ISC"
 }

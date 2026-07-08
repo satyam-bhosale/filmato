@@ -4,17 +4,31 @@
         "module": "nodenext",
         "moduleResolution": "nodenext",
         "types": [
-            "node"
+            "node",
+            "express",
+            "react",
+            "react-dom"
         ],
+        "jsx": "react-jsx",
         "rootDir": ".",
         "outDir": "dist",
+        "baseUrl": ".",
         "paths": {
             "@filmato/backend/*": [
                 "./src/*"
+            ],
+            "@filmato/emails/*": [
+                "./src/emails/*"
             ]
         },
     },
-    "include": ["src"],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "types/**/*.d.ts",
+        "assets/**/*",
+        "drizzle.config.ts"
+    ],
     "exclude": [
         "node_modules",
         "dist"
